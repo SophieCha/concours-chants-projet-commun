@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------navbar---------------------------------------------- */
+
+.navbar {
+    overflow: hidden;
+    background: rgb(211, 233, 252);
+    width: 100%;
+    position: fixed;
+    opacity: 0.9;
+    height: 100px; 
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ul{
+   margin: 0;
+   padding: 0;
+
+}
+header li {
+    float: right;
+    font-size: 1.5rem;  
+    
+}
+header li a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 20px 30px;
+    color: rgb(34, 27, 27);
+    
+}
+header li a:hover {
+    background: rgb(58, 98, 107);
+    color: cornsilk;
+    border-radius: 10px;
+
+}
+li {
+    list-style-type: none;
+}
+.logo{
+    width: 150px;
+    float: left;
+    
+}
+
+/* -------------------------------image background + bouton inscription ------------------------- */
+
+.btinscription {
+    position: absolute;
+    top: 70%;
+    left: 42%;
+    /* transform: translate(-50%, -50%); */
+    font-size: 2.5rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 5px 5px rgba(255, 248, 220, 0.616);
+    background: rgb(58, 98, 107);
+    color: cornsilk;
+    padding: 10px;
+    transition: 0.5 ease-in-out;
+}
+.btinscription:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.imagebg{
+    height: 700px;
+    width: 100%;
+}
+
+/* ----------------------------------pied de page => contact ---------------------------- */
+
+footer {
+    background: rgb(211, 233, 252);
+    height: 200px;
+}
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.titre {
+    text-align: center;
+    font-size: 2rem;
+    margin: 5px;
+    padding: 5px;
+}
+.adresse{
+    font-size: 1.3rem;
+}
+.phone {
+    font-size: 1.3rem;
+}
+.facebook{
+    font-size: 2.5rem;
+
+}
