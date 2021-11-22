@@ -1,0 +1,28 @@
+body {
+    background: lavender;
+  }
+  
+  h2 {
+    text-align: center;
+    background-color: darkcyan;
+    border-radius: 4px;
+    padding: 15px;
+  }
+  
+  h4 {
+    font-size: 13px;
+    display: inline-block;
+    margin: 5px 10px;
+  }
+  
+  .infoUser {
+    background-color: rgba(168, 168, 168, 0.5);
+    border-radius: 4px;
+    padding: 15px;
+  }
+  
+  p {
+    font-size: 12px;
+    display: inline-block;
+    margin: 5px 10px;
+  }

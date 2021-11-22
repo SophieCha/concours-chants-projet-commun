@@ -1,0 +1,29 @@
+
+
+/* ----------------------------------pied de page => contact ---------------------------- */
+
+footer {
+    background: rgb(211, 233, 252);
+    height: 200px;
+}
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.titre {
+    text-align: center;
+    font-size: 2rem;
+    margin: 5px;
+    padding: 5px;
+}
+.adresse{
+    font-size: 1.3rem;
+}
+.phone {
+    font-size: 1.3rem;
+}
+.facebook{
+    font-size: 2.5rem;
+
+}
