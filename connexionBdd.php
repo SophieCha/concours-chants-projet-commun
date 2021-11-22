@@ -3,8 +3,10 @@
 
 
   $servername = 'localhost';
-  $username = 'admin';
-  $password = 'admin';
+
+  $username = 'root';
+  $password = 'root';
+
   
 //   ------------------connexion a la bdd "test" ------------------------  
 
