@@ -28,7 +28,7 @@ $tel = $result['numTelephone'];
 </head>
 <body>
     
-    <h2>Bienvenue dans votre espace utilisateur <?php echo $monPrenom ?> !</h2>
+    <h2>Bienvenue dans votre espace utilisateur <?php echo $prenom ?> !</h2>
     
 
    

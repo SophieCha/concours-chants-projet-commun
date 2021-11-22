@@ -3,8 +3,8 @@
 <?php 
 
 // Récupération des champs "J'ai déjà un compte"
-$email = $_POST["emailV"];
-$mdp = $_POST["mdpV"];
+$email = $_POST["email"];
+$mdp = $_POST["mdp"];
 $admin = 'admin@mail.com';
 
 // Requête qui récupère le mail dans la BDD.

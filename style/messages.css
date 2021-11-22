@@ -1,0 +1,46 @@
+.texteValidationInscription,
+.created {
+  color: black;
+  position: absolute;
+  top: 10%;
+  left: 70%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  text-align: center;
+}
+.mail {
+  color: black;
+  position: absolute;
+  top: 15%;
+  left: 700%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  text-align: center;
+}
+.mdp {
+  color: black;
+  position: absolute;
+  top: 15%;
+  left: 70%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  text-align: center;
+}
+.incorrect {
+  color: black;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  text-align: center;
+}
+.mdpFalse {
+  color: black;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  text-align: center;
+}

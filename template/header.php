@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inscription</title>
-    <link rel="stylesheet" href="./style/form.css">
+    <link rel="stylesheet" href="./style/headerFooter.css"></link>
     
     
 </head>
@@ -17,7 +17,7 @@
             
             <ul>
                 <li><a href="#">Info</a></li>
-                <li><a href="seconnecter.php">Se connecter</a></li>         
+                <li><a href="inscriptionConnexion.php">Se connecter</a></li>         
             </ul>
         </nav>
     </header>

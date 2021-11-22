@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.conteneurFormulaire {
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: cornsilk;
+  padding: 20px 0 10px 0;
+  text-align: center;
+}
+.inscription {
+  margin-left: 150px;
+  width: 40%;
+  color: black;
+}
+.connexion {
+  margin-right: 150px;
+  width: 40%;
+  color: black;
+}
+input,
+button {
+  border: none;
+  width: 49%;
+  padding: 15px 10px;
+  margin: 1px 0;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid grey;
+}
+.button:hover {
+  cursor: pointer;
+  background: rgb(129, 126, 126);
+  color: cornsilk;
+}
