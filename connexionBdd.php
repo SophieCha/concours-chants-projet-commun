@@ -3,7 +3,7 @@
 
 
   $servername = 'localhost';
-  $username = 'pycaste';
+  $username = 'root';
   $password = 'root';
   
 //   ------------------connexion a la bdd "test" ------------------------  
