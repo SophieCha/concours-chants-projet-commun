@@ -23,12 +23,7 @@ $tel = $result['numTelephone'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compte Utilisateur</title>
-    <link rel="stylesheet" href="./style/compteUser.css">
-    <style>
-    h2{
-        text-align:center;
-    }
-</style> 
+    <link rel="stylesheet" href="./style/compteUser.css"> 
 
 </head>
 <body>
@@ -50,20 +45,41 @@ $tel = $result['numTelephone'];
             <h4>Mon email: </h4><p><?php echo $email; ?></p><br />
 
             <h4>Mon numéro de téléphone: </h4><p><?php echo $tel; ?></p><br />
+             <h4>Mon mot de passe: </h4><p>******</p><button type="submit" name="reinitMdp">Réinitialiser</button>
+            
+        </div>
+    <?php echo '<style>#choixChanson{display:block}</style>' ?>
+     <h3>Choisissez votre chanson</h3>
+     
+     <div class="infoUser" id="choixChanson">
+            
+         
+        <form action="envoiMusique.php" method="post">
+         <h4><label for="titre">Vous allez chanter :</label></h4>
+         <input type="titre" name="titre" placeholder="titre de la chanson" required="required">
+        
+         <h4><label for="auteur">Veuillez indiquer l'auteur :</label></h4>
+         <input type="auteur" name="auteur" placeholder="exemple: Céline Dion" required="required">  
+
+         <h4><label for="temps">Temps :</label></h4>
+         <input type="time" name="temps" required="required"> 
+         <button type="submit">Envoyer</button>
+         
+        </form>
         </div>
 
-     <h3>Sélectionnez votre musique</h3>
-     
-     <div class="infoUser">
-         <form action="" method="post">
-         <label for="fileMusique">Insérer votre bande-son</label>
-         <input type="file" name="fileMusique">
+        <?php echo '<style>#transferFile{display:block}</style>'?>
+          <h3>Transférez votre bande-son</h3>
+             <div class="infoUser" id="transferFile">
+             <form action="envoiMusique.php" method="post">
+                <h4><label for="fileMusique">Insérer votre bande-son</label></h4>
+                <input type="file" name="fileMusique" >
+                <button type="submit">Envoyer</button>
+            </form></div>
 
-
-       
-    
-
-    
+        <?php echo '<style>#transferFile{display:block}</style>'?>
+        <h3>Attendez la validation finale</h3>
+        <div class="infoUser">
         </div>
 
 <button formaction='/\localhost/concoursv2/deconnexion.php'>Je me déconnecte.</button>
