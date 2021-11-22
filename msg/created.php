@@ -1,0 +1,1 @@
+<?php echo '<div class="created">Utilisateur ajouté, veuillez maintenant vous connecter.</div>';?>
