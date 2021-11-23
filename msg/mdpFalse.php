@@ -11,7 +11,7 @@
     
     <p class="mdpFalse">
     <?php
-        echo 'Le mot de passe est erroné'; 
+        echo "Ce n'est pas le bon mot de passe"; 
     ?> 
 
     </p>

@@ -10,7 +10,7 @@
 <body>
 <p class="incorrect">
     <?php
-        echo 'Adresse mail incorrecte'; 
+        echo 'E-mail inexistant 🤷'; 
     ?> 
 
     </p>
