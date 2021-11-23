@@ -11,7 +11,7 @@
     
     <p class="mail">
     <?php
-        echo 'Cette e-mail a déjà été utilisé'; 
+        echo 'Cet e-mail a déjà été utilisé!'; 
     ?> 
 
     </p>
