@@ -4,7 +4,7 @@
 
   $servername = 'localhost';
 
-  $username = 'root';
+  $username = 'pycaste';
   $password = 'root';
 
   

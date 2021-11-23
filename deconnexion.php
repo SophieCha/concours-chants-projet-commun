@@ -13,7 +13,7 @@ if (ini_get("session.use_cookies")) {
 // Finalement, on détruit la session.
 session_destroy();
 
-include "./seconnecter.php";
+include "./inscriptionConnexion.php";
 include "./msg/disco.php";
 
 ?>

@@ -82,7 +82,6 @@ $tel = $result['numTelephone'];
         <div class="infoUser">
         </div>
 
-<button formaction='/\localhost/concoursv2/deconnexion.php'>Je me déconnecte.</button>
-
+<form action='/\localhost/concours-chants-projet-commun/deconnexion.php'><input type ="submit" value="Je me déconnecte."></form>
 </body>
 </html>
