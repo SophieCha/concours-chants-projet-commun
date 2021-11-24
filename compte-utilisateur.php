@@ -54,7 +54,7 @@ $tel = $result['numTelephone'];
      <div class="infoUser" id="choixChanson">
             
          
-        <form action="envoiMusique.php" method="post">
+        <form action="envoiTitre.php" method="post">
          <h4><label for="titre">Vous allez chanter :</label></h4>
          <input type="titre" name="titre" placeholder="titre de la chanson" required="required" maxlength="100">
         
