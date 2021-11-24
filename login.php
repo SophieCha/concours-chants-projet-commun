@@ -25,18 +25,31 @@ $mdpcheck = password_verify($mdp, $result['password']);
 
 
 if ($user==false){
-     echo "E-mail inexistant 🤷";
+     
+     include './msg/mailIncorrect.php';
+   include './inscriptionConnexion.php';
 
 
 } else {
 
      if ($email == $admin){
         
-        echo include "./compte-administration.php";
+        
+         if ($mdpcheck==false) {
+       
+        include './msg/mdpFalse.php';
+        include './inscriptionConnexion.php';}
+        
+            else{
+        
+            echo include "./compte-administration.php";
+        }
    
     }else{
         if ($mdpcheck==false) {
-       echo "Ce n'est pas le bon mdp";
+       
+        include './msg/mdpFalse.php';
+        include './inscriptionConnexion.php';
     } else {
      session_start();
      $_SESSION['email'] = $email;

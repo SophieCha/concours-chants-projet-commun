@@ -11,7 +11,7 @@
     
     <p class="mdp">
     <?php
-        echo 'Les mots de passes ne correspondent pas'; 
+        echo 'Les mots de passe ne correspondent pas'; 
     ?> 
 
     </p>
