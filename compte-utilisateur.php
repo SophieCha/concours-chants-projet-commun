@@ -71,7 +71,7 @@ $tel = $result['numTelephone'];
         <?php echo '<style>#transferFile{display:block}</style>'?>
           <h3>Transférez votre bande-son</h3>
              <div class="infoUser" id="transferFile">
-             <form action="envoiMusique.php" method="post">
+             <form action="envoiMusique.php" method="post" enctype="multipart/form-data">
                 <h4><label for="fileMusique">Insérer votre bande-son</label></h4>
                 <input type="file" name="fileMusique" >
                 <button type="submit">Envoyer</button>

@@ -13,8 +13,9 @@
 <body>
     <header>
         <nav class="navbar">
+            <a href="/\localhost/concours-chants-projet-commun/pageAccueil.php">
             <img src="./media/longuenesse-logo-remove.png" alt="logo" class="logo">
-            
+            </a>
             <ul>
                 <li><a href="#">Info</a></li>
                 <li><a href="inscriptionConnexion.php">Se connecter</a></li>         
