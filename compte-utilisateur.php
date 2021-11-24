@@ -56,19 +56,19 @@ $tel = $result['numTelephone'];
          
         <form action="envoiMusique.php" method="post">
          <h4><label for="titre">Vous allez chanter :</label></h4>
-         <input type="titre" name="titre" placeholder="titre de la chanson" required="required">
+         <input type="titre" name="titre" placeholder="titre de la chanson" required="required" maxlength="100">
         
          <h4><label for="auteur">Veuillez indiquer l'auteur :</label></h4>
-         <input type="auteur" name="auteur" placeholder="exemple: Céline Dion" required="required">  
+         <input type="auteur" name="auteur" placeholder="exemple: Céline Dion" required="required" maxlenth="50">  
 
          <h4><label for="temps">Temps :</label></h4>
          <input type="time" name="temps" required="required"> 
          <button type="submit">Envoyer</button>
-         
+        <?php echo $test ?> 
         </form>
         </div>
 
-        <?php echo '<style>#transferFile{display:block}</style>'?>
+        <?php echo '<style>#transferFile{display:none}</style>'?>
           <h3>Transférez votre bande-son</h3>
              <div class="infoUser" id="transferFile">
              <form action="envoiMusique.php" method="post" enctype="multipart/form-data">
@@ -77,9 +77,9 @@ $tel = $result['numTelephone'];
                 <button type="submit">Envoyer</button>
             </form></div>
 
-        <?php echo '<style>#transferFile{display:block}</style>'?>
+        <?php echo '<style>#validFinale{display:none}</style>'?>
         <h3>Attendez la validation finale</h3>
-        <div class="infoUser">
+        <div class="infoUser" id="validFinale">
         </div>
 
 <form action='/\localhost/concours-chants-projet-commun/deconnexion.php'><input type ="submit" value="Je me déconnecte."></form>
