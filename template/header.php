@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +20,10 @@
             </a>
             <ul>
                 <li><a href="#">Info</a></li>
-                <li><a href="inscriptionConnexion.php">Se connecter</a></li>         
+                <li><a href="inscriptionConnexion.php">Se connecter</a></li>
+                <!-- <?php if (session_status() === 2) {
+                echo '<li><a href="compte-utilisateur.php">Compte</a></li>';
+                }?>          -->
             </ul>
         </nav>
     </header>

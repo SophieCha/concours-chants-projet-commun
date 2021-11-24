@@ -1,12 +1,11 @@
 <?php
-
-if (isset($_SESSION ['email'])) {
-
   session_start();
 
-  echo 'Session is active.';
+
+if (session_status() === 2) {
+      echo 'YESSAILLZZLZ';
 } else {
-    echo 'marche po';
+echo "Session is active. Your mail is $mail";
 }
 
 ?>
