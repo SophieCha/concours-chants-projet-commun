@@ -20,10 +20,13 @@
             </a>
             <ul>
                 <li><a href="#">Info</a></li>
-                <li><a href="inscriptionConnexion.php">Se connecter</a></li>
-                <!-- <?php if (session_status() === 2) {
+                <?php 
+              if (isset($_SESSION['email'])) {
                 echo '<li><a href="compte-utilisateur.php">Compte</a></li>';
-                }?>          -->
+                echo '<li><a href="deconnexion.php">Déconnexion</a></li>';
+                }else {
+                echo '<li><a href="inscriptionConnexion.php">Se connecter</a></li>';
+                }?>
             </ul>
         </nav>
     </header>

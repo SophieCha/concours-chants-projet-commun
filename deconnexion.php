@@ -1,6 +1,5 @@
 <?php 
 
-include './template/header.php';
 
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
@@ -13,7 +12,8 @@ if (ini_get("session.use_cookies")) {
 // Finalement, on détruit la session.
 session_destroy();
 
-include "./inscriptionConnexion.php";
+
 include "./msg/disco.php";
+echo "</br><a href ='./inscriptionConnexion.php'> Retour à l'accueil</a>"
 
 ?>

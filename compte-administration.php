@@ -1,5 +1,6 @@
 
-<?php include './connexionBdd.php'; ?>
+<?php include './connexionBdd.php'; 
+include './template/header.php'?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,9 +15,20 @@
 </style> 
 
 </head>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <body>
     <!--<?php include './template/header.php'; ?> -->
     <h2>Bienvenue dans votre espace administration !</h2>
+<br>
+
+<h3>Validation des chansons:
+</h3>
+
 <br>
 
 <?php
@@ -48,9 +60,9 @@ if ($key !== 'validation') {
     echo '<td>'.$value[$key].'</td>';
 }
 elseif ($value[validation] === '0'){
-    echo "<td>En attente.</td>";
+    echo "<td><font color='red'>En attente.</font></td>";
 } elseif ($value[validation] === '1') {
-    echo "<td>Validé.</td>";
+    echo "<td><font color='green'>Validé.</font></td>";
 }
 
 }

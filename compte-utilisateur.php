@@ -1,4 +1,5 @@
-<?php include './connexionBdd.php'; ?>
+<?php include './connexionBdd.php';
+include './template/header.php'; ?>
  <?php 
 session_start();
 
@@ -27,12 +28,16 @@ $tel = $result['numTelephone'];
 
 </head>
 <body>
-    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <h2>Bienvenue dans votre espace utilisateur <?php echo $prenom ?> !</h2>
     
 
    
-       <h3>Vos informations personnelles</h3>
+       <h3>Vos informations personnelles :</h3>
 
        <div class="infoUser">
             
@@ -49,7 +54,7 @@ $tel = $result['numTelephone'];
             
         </div>
     <?php echo '<style>#choixChanson{display:block}</style>' ?>
-     <h3>Choisissez votre chanson</h3>
+     <h3>Choisissez votre chanson :</h3>
      
      <div class="infoUser" id="choixChanson">
             
@@ -69,7 +74,7 @@ $tel = $result['numTelephone'];
         </div>
 
         <?php echo '<style>#transferFile{display:none}</style>'?>
-          <h3>Transférez votre bande-son</h3>
+          <h3>Transférez votre bande-son :</h3>
              <div class="infoUser" id="transferFile">
              <form action="envoiMusique.php" method="post" enctype="multipart/form-data">
                 <h4><label for="fileMusique">Insérer votre bande-son</label></h4>
@@ -82,6 +87,6 @@ $tel = $result['numTelephone'];
         <div class="infoUser" id="validFinale">
         </div>
 
-<form action='/\localhost/concours-chants-projet-commun/deconnexion.php'><input type ="submit" value="Je me déconnecte."></form>
+<!-- <form action='/\localhost/concours-chants-projet-commun/deconnexion.php'><input type ="submit" value="Je me déconnecte."></form> -->
 </body>
 </html>

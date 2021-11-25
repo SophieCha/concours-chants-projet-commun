@@ -38,10 +38,10 @@
 .mdpFalse,
 .deco {
   color: black;
-  position: absolute;
+  /* position: absolute;
   top: 20%;
-  left: 70%;
-  transform: translateX(-50%);
+  left: 70%; */
+  /* transform: translateX(-50%); */
   font-size: 1.5rem;
-  text-align: center;
+  /* text-align: center; */
 }
