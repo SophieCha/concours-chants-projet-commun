@@ -1,13 +1,7 @@
 connexionBdd.php
-<<<<<<< HEAD
-envoiTitre.php
-
-
-=======
 boutonValidation.php
 compte-administration.php
 envoiTitre.php
 temp.php
 app.js
-.gitignore
->>>>>>> py
+gitignore
