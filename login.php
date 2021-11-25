@@ -53,7 +53,14 @@ if ($user==false){
     } else {
      session_start();
      $_SESSION['email'] = $email;
-     include "./compte-utilisateur.php";
+     //include "./compte-utilisateur.php";
+
+    header('Location: http://localhost/concours-chants-projet-commun/compte-utilisateur.php');
+    exit;
+     //include './checkBlocs.php';
+     //include './compte-utilisateur.php';
+     
+     /*echo '<style>#transferFile{display:block}</style>';*/
      
     }
     }

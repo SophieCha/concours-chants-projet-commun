@@ -1,6 +1,8 @@
 <?php include './connexionBdd.php';
 include './template/header.php'; ?>
  <?php 
+include "./checkBlocs.php";
+ 
 session_start();
 
 $email = $_SESSION['email'];
@@ -13,6 +15,9 @@ $nom = $result['nom'];
 $prenom = $result['prenom'];
 $dateNaissance = $result['dateNaissance'];
 $tel = $result['numTelephone'];
+
+
+ 
 
 // include './template/header.php';
         ?>
@@ -37,7 +42,7 @@ $tel = $result['numTelephone'];
     
 
    
-       <h3>Vos informations personnelles :</h3>
+       <h3>Vos informations personnelles </h3>
 
        <div class="infoUser">
             
@@ -53,8 +58,9 @@ $tel = $result['numTelephone'];
              <h4>Mon mot de passe: </h4><p>******</p><button type="submit" name="reinitMdp">Réinitialiser</button>
             
         </div>
-    <?php echo '<style>#choixChanson{display:block}</style>' ?>
-     <h3>Choisissez votre chanson :</h3>
+        
+    <!---bloc 1: si titre chanson pas encore envoyé-->
+     <h3>Choisissez votre chanson </h3>
      
      <div class="infoUser" id="choixChanson">
             
@@ -72,14 +78,18 @@ $tel = $result['numTelephone'];
         <?php echo $test ?> 
         </form>
         </div>
+        <!--bloc 1-Bis si titre chanson déjà envoyé-->
+        <div class="infoUser" id="chansonChoisi">
+            <h4>🎵 Chanson choisie 🎵</h4><p><?php echo $test?></p>
+        </div>
 
-        <?php echo '<style>#transferFile{display:none}</style>'?>
-          <h3>Transférez votre bande-son :</h3>
+        <!--bloc 2 pour upload fichier s'ouvre si chanson a été choisie --> 
+          <h3>Transférez votre bande-son </h3>
              <div class="infoUser" id="transferFile">
              <form action="envoiMusique.php" method="post" enctype="multipart/form-data">
                 <h4><label for="fileMusique">Insérer votre bande-son</label></h4>
-                <input type="file" name="fileMusique" >
-                <button type="submit">Envoyer</button>
+                <input type="file" name="fileMusique" id="fileMusique">
+                <input type="submit" value="Upload" name="submit">
             </form></div>
 
         <?php echo '<style>#validFinale{display:none}</style>'?>

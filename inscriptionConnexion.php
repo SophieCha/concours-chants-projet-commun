@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription/Connexion</title>
     <link rel="stylesheet" href="./style/form.css">
+      
 </head>
 <body>
     <?php include './template/header.php'; ?>

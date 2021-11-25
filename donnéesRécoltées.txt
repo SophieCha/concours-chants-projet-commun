@@ -1,0 +1,12 @@
+Informations de l'utilisateur:
+-Prénom->permet d'identifier l'utilisateur
+-Nom->permet d'identifier l'utilisateur
+-mail->permet d'identifier et de contacter l'utilsateur
+-date de naissance ->contrôle de l'âge
+-numéro téléphone ->permet de contacter l'utilisateur
+
+
+-Données récoltées lors de l'inscription
+-Cookies récoltées au moment du login, et dans l'espace utilisateur.
+
+-Données récoltées stockées dans la bdd concoursChant, dans la table users.

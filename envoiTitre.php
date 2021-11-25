@@ -11,7 +11,7 @@
         $sql2->execute();
         $result = $sql2->fetch( PDO::FETCH_ASSOC );
         
-        $email = $result['email'];
+       // $email = $result['email'];
        
 
          $titre = $_POST["titre"];
@@ -20,10 +20,21 @@
 
         $monID = $result['ID'];
 
+       $envoiInParticipant= "INSERT INTO `participant`(`userID`, `chanson`, `auteur`,`temps`) VALUES ('$monID','$titre','$auteur','$temps')";
+       $requete = $connexion->prepare($envoiInParticipant);
+       $requete->execute(); 
+
+
        $checkInBdd = $connexion->prepare("SELECT * FROM participant WHERE userID='$monID'");
        $checkInBdd->execute();
        $result2 = $checkInBdd->fetch( PDO::FETCH_ASSOC ); 
-       if ($result2){
+
+       $titreAjouté = $result2['chanson'];
+       header('Location: http://localhost/concours-chants-projet-commun/compte-utilisateur.php');
+    exit;
+       //include './checkBlocs.php';
+       
+       /*if ($result2){
 
 
               
@@ -31,9 +42,7 @@
               include "./compte-utilisateur.php";
 
        }else{
-              $envoiInParticipant= "INSERT INTO `participant`(`userID`, `chanson`, `auteur`,`temps`) VALUES ('$monID','$titre','$auteur','$temps')";
-              $requete = $connexion->prepare($envoiInParticipant);
-              $requete->execute(); 
+             
 
               $checkInBdd = $connexion->prepare("SELECT * FROM participant WHERE userID='$monID'");
               $checkInBdd->execute();
@@ -42,7 +51,9 @@
               
               $titreAjouté = $result2['chanson'];
               include "./compte-utilisateur.php";
-              echo '<style>#transferFile{display:block}</style>';
+              echo '<style>#transferFile
+              
+              {display:block}</style>';
               
               
        } 

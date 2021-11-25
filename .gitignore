@@ -1,4 +1,4 @@
-./connexionBdd.php
-./boutonValidation.php
-./compte-administration.php
-./envoiTitre.php
+connexionBdd.php
+envoiTitre.php
+
+
