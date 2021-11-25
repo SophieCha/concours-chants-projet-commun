@@ -25,6 +25,11 @@
             <input type="text" name="numTelephone" placeholder="Numéro de téléphone" required maxlength="14">
             <input type="password" name="password1" placeholder="Choisissez un mot de passe" required="required">
             <input type="password" name="password2" placeholder="Confirmer le mot de passe" required="required">
+            <br>
+            <br>
+            <div class="checkb"><input type="checkbox" required class="checkbox">J'ai lu et j'accepte <a href="infos.php">les conditions d'utilisation.</a> </div>
+            <br>
+            
             <button id="valideInscrip" class="button" type="submit">Je m'inscris!</button>
         </form>
     </div>

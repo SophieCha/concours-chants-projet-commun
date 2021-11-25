@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inscription</title>
     <link rel="stylesheet" href="./style/headerFooter.css"></link>
     
     
@@ -19,7 +18,7 @@
             <img src="./media/longuenesse-logo-remove.png" alt="logo" class="logo">
             </a>
             <ul>
-                <li><a href="#">Info</a></li>
+                <li><a href="infos.php">Info</a></li>
                 <?php 
               if (isset($_SESSION['email'])) {
                 echo '<li><a href="compte-utilisateur.php">Compte</a></li>';

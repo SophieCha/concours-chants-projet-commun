@@ -23,7 +23,7 @@ $tel = $result['numTelephone'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compte Utilisateur</title>
+    <title>Votre compte</title>
     <link rel="stylesheet" href="./style/compteUser.css"> 
 
 </head>
@@ -73,7 +73,7 @@ $tel = $result['numTelephone'];
         </form>
         </div>
 
-        <?php echo '<style>#transferFile{display:none}</style>'?>
+        <?php echo '<style>#transferFile</style>'?>
           <h3>Transférez votre bande-son :</h3>
              <div class="infoUser" id="transferFile">
              <form action="envoiMusique.php" method="post" enctype="multipart/form-data">

@@ -41,3 +41,11 @@ button {
   background: rgb(129, 126, 126);
   color: cornsilk;
 }
+.checkbox {
+  margin: 0%;
+  width: 25px;
+}
+
+.checkb {
+  font-size: smaller;
+}

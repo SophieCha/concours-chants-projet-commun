@@ -1,4 +1,9 @@
 /*header*/
+img {
+  width: 100%;
+  height: auto;
+}
+
 .navbar {
   overflow: hidden;
   background: rgb(211, 233, 252);
