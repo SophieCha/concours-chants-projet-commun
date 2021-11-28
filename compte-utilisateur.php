@@ -85,10 +85,10 @@ $tel = $result['numTelephone'];
         <?php echo '<style>#transferFile</style>'?>
           <h3>Transférez votre bande-son :</h3>
              <div class="infoUser" id="transferFile">
-             <form action="envoiMusique.php" method="post" enctype="multipart/form-data">
-                <h4><label for="fileMusique">Insérer votre bande-son</label></h4>
-                <input type="file" name="fileMusique" id="fileMusique">
-                <input type="submit" value="Upload" name="submit">
+             <form action="upload.php" method="POST" enctype="multipart/form-data">
+                <h4><label for="file">Insérer votre bande-son</label></h4>
+                <input type="file" name="file" id="file">
+                <button type="submit" name="submit">UPLOAD</button>
             </form></div>
 
         <?php echo '<style>#validFinale{display:none}</style>'?>
