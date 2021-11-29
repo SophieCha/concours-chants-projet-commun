@@ -1,5 +1,5 @@
 <?php include './connexionBdd.php';
-include './template/header.php'; 
+// include './template/header.php'; 
 ?>
 
 <!DOCTYPE html>
