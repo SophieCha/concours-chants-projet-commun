@@ -41,3 +41,23 @@ table th {
 h2 {
   text-align: center;
 }
+.rechercheInfos {
+  margin-left: 150px;
+}
+.rechercheInfos input {
+  width: 13%;
+  height: 40px;
+}
+.InfosMail {
+  position: absolute;
+  top: 37%;
+  left: 25%;
+  margin-left: 150px;
+  height: 40px;
+  width: 35%;
+  background: white;
+  border: 1px solid rgb(20, 20, 24);
+  border-radius: 10px;
+  text-align: center;
+  
+}

@@ -26,8 +26,23 @@ include './template/header.php'?>
     <h2>Bienvenue dans votre espace administration !</h2>
 <br>
 
+<h3>
+    Recherche informations participants
+</h3>
+<div class="rechercheInfos">
+
+        <form action="infosMail.php" method="post">
+            <input type="text" name="verifInfos" placeholder="Email du participant">
+            <input type="submit" value="envoyer ">
+            
+        </form>
+
+</div>
+
 <h3>Validation des chansons:
 </h3>
+
+
 
 <br>
 
