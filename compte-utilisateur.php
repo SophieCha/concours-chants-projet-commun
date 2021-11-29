@@ -71,8 +71,6 @@ $tel = $result['numTelephone'];
          <h4><label for="auteur">Veuillez indiquer l'auteur :</label></h4>
          <input type="auteur" name="auteur" placeholder="exemple: Céline Dion" required="required" maxlenth="50">  
 
-         <h4><label for="temps">Temps :</label></h4>
-         <input type="time" name="temps" required="required"> 
          <button type="submit">Envoyer</button>
         <?php echo $test ?> 
         </form>

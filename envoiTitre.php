@@ -16,11 +16,10 @@
 
          $titre = $_POST["titre"];
          $auteur = $_POST["auteur"];
-         $temps = $_POST["temps"];
 
         $monID = $result['ID'];
 
-       $envoiInParticipant= "INSERT INTO `participant`(`userID`, `chanson`, `auteur`,`temps`) VALUES ('$monID','$titre','$auteur','$temps')";
+       $envoiInParticipant= "INSERT INTO `participant`(`userID`, `chanson`, `auteur`) VALUES ('$monID','$titre','$auteur')";
        $requete = $connexion->prepare($envoiInParticipant);
        $requete->execute(); 
 
