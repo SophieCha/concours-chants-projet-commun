@@ -1,3 +1,11 @@
+<?php  
+
+if (isset($_SESSION['email']) ) {
+    header('Location: http://localhost/concours-chants-projet-commun/compte-utilisateur.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

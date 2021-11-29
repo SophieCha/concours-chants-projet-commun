@@ -1,6 +1,14 @@
 
 <?php include './connexionBdd.php'; 
-include './template/header.php'?>
+include './template/header.php';
+
+session_start();
+if ($_SESSION['email']!= "admin@mail.com"){
+   header('Location: http://localhost/concours-chants-projet-commun/inscriptionConnexion.php');
+};
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,8 +34,23 @@ include './template/header.php'?>
     <h2>Bienvenue dans votre espace administration !</h2>
 <br>
 
+<h3>
+    Recherche informations participants
+</h3>
+<div class="rechercheInfos">
+
+        <form action="infosMail.php" method="post">
+            <input type="text" name="verifInfos" placeholder="Email du participant">
+            <input type="submit" value="envoyer ">
+            
+        </form>
+
+</div>
+
 <h3>Validation des chansons:
 </h3>
+
+
 
 <br>
 

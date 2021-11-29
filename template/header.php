@@ -20,12 +20,23 @@
             <ul>
                 <li><a href="infos.php">Info</a></li>
                 <?php 
-              if (isset($_SESSION['email'])) {
+
+                if ($_SESSION['email'] === 'admin@mail.com'){
+                         echo '<li><a href="compte-administration.php">Administrateur</a></li>';
+                          echo '<li><a href="deconnexion.php">Déconnexion</a></li>';
+                }
+
+
+              elseif (isset($_SESSION['email']) ) {
                 echo '<li><a href="compte-utilisateur.php">Compte</a></li>';
                 echo '<li><a href="deconnexion.php">Déconnexion</a></li>';
                 }else {
                 echo '<li><a href="inscriptionConnexion.php">Se connecter</a></li>';
-                }?>
+                }
+                
+                
+                
+                ?>
             </ul>
         </nav>
     </header>

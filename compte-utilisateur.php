@@ -2,7 +2,11 @@
 include './template/header.php'; 
 include "./checkBlocs.php";
  
+
 session_start();
+if (empty($_SESSION['email'])){
+    header('Location: http://localhost/concours-chants-projet-commun/inscriptionConnexion.php');
+};
 
 $email = $_SESSION['email'];
 
@@ -80,14 +84,23 @@ $tel = $result['numTelephone'];
             <h4>🎵 Chanson choisie 🎵</h4><p><?php echo $test?></p>
         </div>
 
-        <?php echo '<style>#transferFile</style>'?>
+        
           <h3>Transférez votre bande-son :</h3>
              <div class="infoUser" id="transferFile">
-             <form action="envoiMusique.php" method="post" enctype="multipart/form-data">
-                <h4><label for="fileMusique">Insérer votre bande-son</label></h4>
-                <input type="file" name="fileMusique" id="fileMusique">
-                <input type="submit" value="Upload" name="submit">
+             <form action="upload.php" method="POST" enctype="multipart/form-data">
+                <h4><label for="file">Insérer votre bande-son</label></h4>
+                <input type="file" name="file" id="file">
+                <button type="submit" name="submit">UPLOAD</button>
             </form></div>
+
+            <div class="infoUser" id="transferFileDone">
+             <form action="upload.php" method="POST" enctype="multipart/form-data">
+                <h4>Bande son uploadée!<h4>
+               
+            </div>
+
+
+
 
         <?php echo '<style>#validFinale{display:none}</style>'?>
         <h3>Attendez la validation finale</h3>
