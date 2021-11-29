@@ -1,6 +1,14 @@
 
 <?php include './connexionBdd.php'; 
-include './template/header.php'?>
+include './template/header.php';
+
+session_start();
+if ($_SESSION['email']!= "admin@mail.com"){
+   header('Location: http://localhost/concours-chants-projet-commun/inscriptionConnexion.php');
+};
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -4,4 +4,6 @@ compte-administration.php
 envoiTitre.php
 temp.php
 app.js
-gitignore
+/uploads
+curl.php
+

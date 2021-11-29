@@ -15,7 +15,7 @@ if(isset($_POST['submit'])) {
     $fileExt = explode('.',$fileName);
     $fileActualExt = strtolower(end($fileExt));
 
-    $allowed = array('mp3','jpg','jpeg');
+    $allowed = array('mp3','jpg','jpeg',);
 
     if (in_array($fileActualExt, $allowed)) {
         if ($fileError === 0){
@@ -24,7 +24,14 @@ if(isset($_POST['submit'])) {
 
                 $fileDestination = 'uploads/'.$fileNameNew;
                 move_uploaded_file($fileTmpName,$fileDestination);
-                header("Location: compte-utilisateur.php?uploadsuccess");
+                
+               header("Location: compte-utilisateur.php?uploadsuccess");
+               
+                //echo '<style>#transferFileDone{display:none}</style>'; 
+               // echo '<style>#transferFile{display:none}</style>'; 
+
+                
+
             }else{
                 echo "Your file is too big!";
             }

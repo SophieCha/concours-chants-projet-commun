@@ -32,7 +32,7 @@ if ($user==false){
 
 } else {
 
-     if ($email == $admin){
+     if ($email === $admin){
         
         
          if ($mdpcheck==false) {
@@ -41,8 +41,13 @@ if ($user==false){
         include './inscriptionConnexion.php';}
         
             else{
+                session_start();
+                $_SESSION['email'] = $email;
+                
+
         
-            echo include "./compte-administration.php";
+            header('Location: http://localhost/concours-chants-projet-commun/compte-administration.php');
+            exit;
         }
    
     }else{
