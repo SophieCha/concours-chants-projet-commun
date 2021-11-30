@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>API</title>
-     <link rel="stylesheet" href="style/compteAdmin.css">
-</head>
-<body>
-     
-
-
-
 <?php
 
 $artiste = $_POST['artiste'];
@@ -27,7 +13,7 @@ $handle = curl_init();
 
 // echo $strartist;
 // echo $strtitle;
-echo $url;
+// echo $url;
 // echo "<br>";
 //curl_setopt($handle, CURLOPT_POST, 0);
 
@@ -42,7 +28,7 @@ $result = curl_exec($handle);
 $res = json_decode($result);
 $arti = 'artist-credit';
 
-echo "<table>";
+echo "<center><table>";
 
 echo "<th>Artiste</th><th>Titre</th>";
 
@@ -56,9 +42,5 @@ echo $res->recordings[$i]->title;
 echo "</td>";
 echo "</tr>";
 }
-echo "</table>"
+echo "</table></center>";
 ?>
-
-</body>
-
-</html>

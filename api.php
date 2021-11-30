@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API</title>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="style/style.css">
 
     <script>
 //   function Envoyer() {
@@ -35,15 +36,36 @@
 </head>
 <body>
 
+<div class="wrapper">
+
+<div class="one">
 <form id="myForm" method="post">
+  <b>Choisissez votre chanson:</b>
+  <br>
+  <br>
     <input type="text" placeholder="artiste" name="artiste" id="artiste">
+    <br>
     <br>
     <input type="text" placeholder="titre" name="titre" id="titre">
     <br>
+    <br>
     <input type="button" value="Rechercher des titres" onclick="submitForm();">
+    <br>
+    <br>
 </form>
+</div>
 
- <p>Voulez-vous dire: <span id="texte"></span></p>
+<div class="two">
+ <p><b>Voulez-vous dire:</b> </p>
+ <p><span id="texte"></span></p>
+</div>
+
+<div class="three">
+<p>Confirmez votre choix:</p>
+<input type="button" value="Je valide.">
+</div>
+
+</div>
 
  <script src="app.js"></script>
 </body>
