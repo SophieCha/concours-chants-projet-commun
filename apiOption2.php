@@ -14,7 +14,7 @@ function showHint(str) {
         document.getElementById("txtHint").innerHTML = this.responseText;
       }
     }
-    xmlhttp.open("GET", "apiRetour.php?q="+str, true);
+    xmlhttp.open("GET", "apiOption2Retour.php?q="+str, true);
     xmlhttp.send();
   }
 }
