@@ -32,3 +32,23 @@
 .three {
   text-align: center;
 }
+
+table{
+  border-collapse: collapse;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+table tr:nth-child(even){background: #ebebeb;}
+
+table tr:hover {background-color: #ddd;}
+
+table th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  color: white;
+}

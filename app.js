@@ -1,23 +1,4 @@
-// function Envoyer(e) {
-//   e.preventDefault();
-//   alert("requete");
-
-//   //instanciation de la requête
-//   var xmlhttp = new XMLHttpRequest();
-//   // Fonction associée à un retour de réponse du serveur
-//   xmlhttp.onreadystatechange = function () {
-//     // Si il y a eu une réponse du serveur valide
-//     if (this.readyState == 4 && this.status == 200) {
-//       // ajout de la réponse sur l'élément html "texte"
-//       document.getElementById("texte").innerHTML = this.responseText;
-//     }
-//   };
-
-//   str = "parametre_eventuel";
-//   // préparation d'envoie de la requête
-//   xmlhttp.open("GET", "curl.php?value=" + str, true);
-//   xmlhttp.send();
-// }
+var valider = document.getElementById("valider");
 
 function submitForm() {
   var artiste = $("#artiste").val();
@@ -28,7 +9,16 @@ function submitForm() {
 
     function (data) {
       $("#texte").html(data);
-      $("#myForm")[0].reset();
+      // $("#myForm")[0].reset();
     }
   );
+}
+
+
+
+function writeValid(x){
+  var cell1 = document.getElementById("td1"+x).innerHTML;
+  var cell2 = document.getElementById("td2"+x).innerHTML;
+
+  valider.innerHTML = cell1 + cell2;
 }

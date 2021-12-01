@@ -40,7 +40,7 @@
 
 <div class="one">
 <form id="myForm" method="post">
-  <b>Choisissez votre chanson:</b>
+  <b>Recherchez votre chanson:</b>
   <br>
   <br>
     <input type="text" placeholder="artiste" name="artiste" id="artiste">
@@ -49,7 +49,7 @@
     <input type="text" placeholder="titre" name="titre" id="titre">
     <br>
     <br>
-    <input type="button" value="Rechercher des titres" onclick="submitForm();">
+    <input type="button" value="Recherche" onclick="submitForm();">
     <br>
     <br>
 </form>
@@ -62,6 +62,7 @@
 
 <div class="three">
 <p>Confirmez votre choix:</p>
+<p id="valider"></p>
 <input type="button" value="Je valide.">
 </div>
 

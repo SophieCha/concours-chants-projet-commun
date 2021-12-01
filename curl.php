@@ -30,17 +30,19 @@ $arti = 'artist-credit';
 
 echo "<center><table>";
 
-echo "<th>Artiste</th><th>Titre</th>";
+echo "<th>Choisir</th><th>Artiste</th><th>Titre</th>";
 
-for ($i = 0; $i <= 5; $i++){
+for ($i = 0; $i <= 4; $i++){
 echo "<tr>";
-echo "<td>";
+echo "<td><input type='button' value='$i' onclick='writeValid($i)'</td>";
+echo "<td id='td1$i'>";
 echo $res->recordings[$i]->$arti[0]->name;
 echo "</td>";
-echo "<td>";
+echo "<td id='td2$i'>";
 echo $res->recordings[$i]->title;
 echo "</td>";
 echo "</tr>";
 }
 echo "</table></center>";
 ?>
+
