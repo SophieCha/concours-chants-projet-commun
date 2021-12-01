@@ -18,9 +18,6 @@ if ($_SESSION['email']!= "admin@mail.com"){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compte Administration</title>
     <link rel="stylesheet" href="./style/compteAdmin.css">
-    <style>
-
-</style> 
 
 </head>
 <br>
@@ -75,9 +72,13 @@ echo "<th>Décision</th>";
 echo '</tr>';
 
 foreach ($user as $key => $value) {
-echo '<tr>';
+echo '<tr >';
 for ($j=0; $j < $i ; $j++) {
 $key = $tablename[$j];
+
+
+    
+
 
 if ($key !== 'validation') {
     echo '<td>'.$value[$key].'</td>';
@@ -91,11 +92,15 @@ elseif ($value[validation] === '0'){
 }
 if ($value[validation] === '0') {
     echo '<td> <form action="validSong.php" method="post">
+    <input id="idSelectToValid" name="idSelect" type="hidden" value="'.$value[userID].'">
+
     <input type="submit" name="valid" value="Valider"/>
+    
     </form> </td>';
     } else {
     echo '<td> <form action="cancelSong.php" method="post">
     <input type="submit" name="valid" value="Annuler"/>
+     <input id="idSelectToCancel" name="idSelect" type="hidden" value="'.$value[userID].'">
     </form> </td>';
 }
 
@@ -105,6 +110,9 @@ echo '</table>';
 
 
 
+$good = $user->tablename['chanson']; 
+
+//echo $value[userID];
 ?>
 </body>
 </html>

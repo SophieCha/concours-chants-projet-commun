@@ -23,11 +23,13 @@
        echo '<style>#choixChanson{display:none}</style>';
        echo '<style>#chansonChoisi{display:block}</style>';
        echo '<style>#transferFile{display:block}</style>';
+       echo '<style>#transferFileDone{display:none}</style>';
        //include "./compte-utilisateur.php";
        
        }else{
               echo '<style>#chansonChoisi{display:none}</style>';
               echo '<style>#transferFile{display:none}</style>';
+              echo '<style>#transferFileDone{display:none}</style>';
               //include "./compte-utilisateur.php";
               
               
