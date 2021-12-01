@@ -1,6 +1,7 @@
 
-<?php include './connexionBdd.php'; ?>
 
+<?php include 'connexionBdd.php'; ?>
+    
 <?php
 
 
