@@ -62,8 +62,9 @@
 
 <div class="three">
 <p>Confirmez votre choix:</p>
-<p id="valider"></p>
-<input type="button" value="Je valide.">
+<input type="text" readonly id="valider"></p>
+<input type="button" value="Je valide." onclick="submitValid()">
+<p id="test"></p>
 </div>
 
 </div>
