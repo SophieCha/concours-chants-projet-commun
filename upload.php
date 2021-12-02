@@ -16,6 +16,7 @@ session_start();
         $result = $sql2->fetch( PDO::FETCH_ASSOC );
         
         $monID = $result['ID'];
+        $monNom = $result['nom'];
 
 
 
@@ -38,7 +39,7 @@ if(isset($_POST['submit'])) {
     if (in_array($fileActualExt, $allowed)) {
         if ($fileError === 0){
             if ($fileSize < 8000000){
-                $fileNameNew= uniqid($fileName,true).".".$fileActualExt;
+                $fileNameNew= $monNom.$monID.".".$fileActualExt;
 
                 $fileDestination = 'uploads/'.$fileNameNew;
                 move_uploaded_file($fileTmpName,$fileDestination);

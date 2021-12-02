@@ -40,7 +40,7 @@
                      echo '<style>#transferFileDone{display:block}</style>';    
                      echo '<style>#validFinale{display:block}</style>';
 
-                     if($validationOk){$msgValid="c'est ok!Rdv pour le concours!!";
+                     if($validationOk){$msgValid="🌠 C'est validé !!! C'est toi le nouveau Johnny!!!🎤";
 
                      }else{
                             $msgValid= 'En attente ⌛';
