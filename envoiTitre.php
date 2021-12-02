@@ -12,12 +12,11 @@
         $result = $sql2->fetch( PDO::FETCH_ASSOC );
         
        // $email = $result['email'];
-       
+       $monID = $result['ID'];
+       $titre = $_POST["titre"];
+       $auteur = $_POST["auteur"];
 
-         $titre = $_POST["titre"];
-         $auteur = $_POST["auteur"];
-
-        $monID = $result['ID'];
+        
 
        $envoiInParticipant= "INSERT INTO `participant`(`userID`, `chanson`, `auteur`) VALUES ('$monID','$titre','$auteur')";
        $requete = $connexion->prepare($envoiInParticipant);

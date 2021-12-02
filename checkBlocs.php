@@ -12,45 +12,52 @@
         
         $monID = $result['ID'];
 
-        $checkInBdd = $connexion->prepare("SELECT * FROM participant WHERE userID='$monID'");
-        $checkInBdd->execute();
-        $result2 = $checkInBdd->fetch( PDO::FETCH_ASSOC ); 
+        $checkIfIdExists = $connexion->prepare("SELECT * FROM participant WHERE userID='$monID'");
+        $checkIfIdExists->execute();
+        $result2 = $checkIfIdExists->fetch( PDO::FETCH_ASSOC ); 
+         $uploadOk = $result2['bandeSon'];
+         $validationOk = $result2['validation'];
+
+        //$checkIfUploadExists =$connexion->prepare("SELECT bandeSon FROM participant WHERE userID='$monID'");
+        //$checkIfUploadExists->execute();
+        //$uploadOk=$checkIfUploadExists->fetch( PDO::FETCH_ASSOC );
        
        if ($result2){
 
             $titreAdd = $result2['chanson'];
-            $titreAdd;
+           
        echo '<style>#choixChanson{display:none}</style>';
        echo '<style>#chansonChoisi{display:block}</style>';
        echo '<style>#transferFile{display:block}</style>';
        echo '<style>#transferFileDone{display:none}</style>';
+       echo '<style>#validFinale{display:none}</style>';
+       
+              
+              if($uploadOk){
+                     echo '<style>#choixChanson{display:none}</style>';
+                     echo '<style>#chansonChoisi{display:block}</style>';
+                     echo '<style>#transferFile{display:none}</style>';
+                     echo '<style>#transferFileDone{display:block}</style>';    
+                     echo '<style>#validFinale{display:block}</style>';
+
+                     if($validationOk){$msgValid="c'est ok!Rdv pour le concours!!";
+
+                     }else{
+                            $msgValid= 'En attente ⌛';
+                     }
+
+              }
+
+
        //include "./compte-utilisateur.php";
        
        }else{
               echo '<style>#chansonChoisi{display:none}</style>';
               echo '<style>#transferFile{display:none}</style>';
               echo '<style>#transferFileDone{display:none}</style>';
-              //include "./compte-utilisateur.php";
+              echo '<style>#transferFileDone{display:none}</style>';    
+              echo '<style>#validFinale{display:none}</style>';
               
-              
-              /*$titre = $_POST["titre"];
-              $auteur = $_POST["auteur"];
-              $temps = $_POST["temps"];
-              $envoiInParticipant= "INSERT INTO `participant`(`userID`, `chanson`, `auteur`,`temps`) VALUES ('$monID','$titre','$auteur','$temps')";
-              $requete = $connexion->prepare($envoiInParticipant);
-              $requete->execute(); 
-
-              $checkInBdd = $connexion->prepare("SELECT * FROM participant WHERE userID='$monID'");
-              $checkInBdd->execute();
-              $result2 = $checkInBdd->fetch( PDO::FETCH_ASSOC ); 
-
-              
-              $titreAjouté = $result2['chanson'];
-              $test=$titreAjouté;
-              include "./compte-utilisateur.php";
-              echo '<style>#transferFile
-              
-              {display:block}</style>';*/
               
               
        } 

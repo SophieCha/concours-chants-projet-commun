@@ -106,9 +106,11 @@ $tel = $result['numTelephone'];
 
 
 
-        <?php echo '<style>#validFinale{display:none}</style>'?>
+       
         <h3>Attendez la validation finale</h3>
         <div class="infoUser" id="validFinale">
+            <h4>Statut validation :</h4><p><?php echo $msgValid?></p>
+
         </div>
 
 <!-- <form action='/\localhost/concours-chants-projet-commun/deconnexion.php'><input type ="submit" value="Je me déconnecte."></form> -->
