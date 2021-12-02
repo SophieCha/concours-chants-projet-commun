@@ -11,28 +11,6 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="style/style.css">
 
-    <script>
-//   function Envoyer() {
-//   // alert("requete");
-
-//   //instanciation de la requête
-//   var xmlhttp = new XMLHttpRequest();
-//   // Fonction associée à un retour de réponse du serveur
-//   xmlhttp.onreadystatechange = function () {
-//     // Si il y a eu une réponse du serveur valide
-//     if (this.readyState == 4 && this.status == 200) {
-//       // ajout de la réponse sur l'élément html "texte"
-//       document.getElementById("texte").innerHTML = this.responseText;
-//     }
-//   };
-
-//   str = "parametre_eventuel";
-//   // préparation d'envoie de la requête
-//   xmlhttp.open("POST", "curl.php?value=" + str, true);
-//   xmlhttp.send();
-// }
-
-//    </script>
 </head>
 <body>
 
@@ -62,8 +40,9 @@
 
 <div class="three">
 <p>Confirmez votre choix:</p>
-<input type="text" readonly id="valider"></p>
-<input type="button" value="Je valide." onclick="submitValid()">
+<form for="valider" method="post" action="songParticipant.php">
+<input type="text" name="musiqueFinale"readonly id="valider"></p>
+<input type="submit" value="Je valide." name="valider" ></form>
 <p id="test"></p>
 </div>
 
@@ -72,3 +51,4 @@
  <script src="app.js"></script>
 </body>
 </html>
+

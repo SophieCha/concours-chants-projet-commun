@@ -64,11 +64,15 @@ $tel = $result['numTelephone'];
         
     <!---bloc 1: si titre chanson pas encore envoyé-->
      <h3>Choisissez votre chanson </h3>
+
+     
      
      <div class="infoUser" id="choixChanson">
+
+     <?php include './api.php';?>
             
          
-        <form action="envoiTitre.php" method="post">
+       <!-- <form action="envoiTitre.php" method="post">
          <h4><label for="titre">Vous allez chanter :</label></h4>
          <input type="titre" name="titre" placeholder="titre de la chanson" required="required" maxlength="100">
         
@@ -76,12 +80,12 @@ $tel = $result['numTelephone'];
          <input type="auteur" name="auteur" placeholder="exemple: Céline Dion" required="required" maxlenth="50">  
 
          <button type="submit">Envoyer</button>
-        <?php echo $test ?> 
-        </form>
+    
+        </form>-->
         </div>
         <!--bloc 1-Bis si titre chanson déjà envoyé-->
         <div class="infoUser" id="chansonChoisi">
-            <h4>🎵 Chanson choisie 🎵</h4><p><?php echo $test?></p>
+            <h4>🎵 Chanson choisie 🎵</h4><p><?php echo $titreAdd?></p>
         </div>
 
         
@@ -94,7 +98,7 @@ $tel = $result['numTelephone'];
             </form></div>
 
             <div class="infoUser" id="transferFileDone">
-             <form action="upload.php" method="POST" enctype="multipart/form-data">
+             <form action="" method="POST" enctype="multipart/form-data">
                 <h4>Bande son uploadée!<h4>
                
             </div>

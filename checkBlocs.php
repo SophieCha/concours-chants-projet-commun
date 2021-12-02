@@ -18,8 +18,8 @@
        
        if ($result2){
 
-            $titreAjouté = $result2['chanson'];
-       $test= $titreAjouté;
+            $titreAdd = $result2['chanson'];
+            $titreAdd;
        echo '<style>#choixChanson{display:none}</style>';
        echo '<style>#chansonChoisi{display:block}</style>';
        echo '<style>#transferFile{display:block}</style>';

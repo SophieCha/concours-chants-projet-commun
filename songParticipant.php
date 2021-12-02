@@ -17,4 +17,6 @@ $go = "INSERT INTO `participant`(`userID`, `chanson`) VALUES ('$id', '$musique')
 $query = $connexion->prepare($go);
 $query->execute();
 
+header('Location: http://localhost/concours-chants-projet-commun/compte-utilisateur.php');
+
 ?>

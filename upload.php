@@ -1,7 +1,16 @@
+    
     <?php
+
+    include './connexionBdd.php';
+
+
 
 /*Ne pas oublier d'autoriser modif au dossier uploads: sudo chmod 777 uploads (ds le dossier concours-chants!!)*/
 
+
+
+
+//lignes suivantes:script pour l'envoi du fichier.
 if(isset($_POST['submit'])) {
     $file = $_FILES['file'];
     print_r($file);
@@ -24,11 +33,19 @@ if(isset($_POST['submit'])) {
 
                 $fileDestination = 'uploads/'.$fileNameNew;
                 move_uploaded_file($fileTmpName,$fileDestination);
-                
-               header("Location: compte-utilisateur.php?uploadsuccess");
+
                
-                //echo '<style>#transferFileDone{display:none}</style>'; 
-               // echo '<style>#transferFile{display:none}</style>'; 
+                
+                
+               //header("Location: compte-utilisateur.php?uploadsuccess");
+                 
+                
+               header('Location: http://localhost/concours-chants-projet-commun/compte-utilisateur.php');
+               
+                $envoi= "UPDATE participant SET `bandeSon`=1 WHERE userID =17";
+                $requete = $connexion->prepare($envoi);
+                $requete->execute();
+                
 
                 
 
@@ -46,3 +63,8 @@ if(isset($_POST['submit'])) {
     }
 }
  ?>
+
+ 
+
+
+
