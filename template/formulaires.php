@@ -18,13 +18,13 @@
     
         <form action="validInscription.php" method="post" class="formulaire">
  
-            <input type="text" name="prenom" placeholder="Prénom" required  maxlength="35">
-            <input type="text" name="nom" placeholder="Nom" required  maxlength="30">
-            <input type="text" name="email" placeholder="E-mail" required pattern="^[A-Za-z . - _ 0-9]+@{1}[A-Za-z]+\.{1}[A-Za-z]{2,}$">
-            <input type="date" name="dateNaissance" placeholder="Date de naissance" min="1920-01-01" max="2020-01-01" required="required">
-            <input type="text" name="numTelephone" placeholder="Numéro de téléphone" required maxlength="14">
-            <input type="password" name="password1" placeholder="Choisissez un mot de passe" required="required">
-            <input type="password" name="password2" placeholder="Confirmer le mot de passe" required="required">
+            <input id="inputInscription" type="text" name="prenom" placeholder="Prénom" required  maxlength="35">
+            <input id="inputInscription1" type="text" name="nom" placeholder="Nom" required  maxlength="30">
+            <input id="inputInscription2"  type="text" name="email" placeholder="E-mail" required pattern="^[A-Za-z . - _ 0-9]+@{1}[A-Za-z]+\.{1}[A-Za-z]{2,}$">
+            <input id="inputInscription3"  type="date" name="dateNaissance" placeholder="Date de naissance" min="1920-01-01" max="2020-01-01" required="required">
+            <input id="inputInscription4"  type="text" name="numTelephone" placeholder="Numéro de téléphone" required maxlength="14">
+            <input id="inputInscription5"  type="password" name="password1" placeholder="Choisissez un mot de passe" required="required">
+            <input id="inputInscription6"  type="password" name="password2" placeholder="Confirmer le mot de passe" required="required">
             <br>
             <br>
             <div class="checkb"><input type="checkbox" required class="checkbox">J'ai lu et j'accepte <a href="infos.php">les conditions d'utilisation.</a> </div>
@@ -42,6 +42,7 @@
             <input type="text" name="email" placeholder="E-mail" required pattern="^[A-Za-z . - _ 0-9]+@{1}[A-Za-z]+\.{1}[A-Za-z]{2,}$">
             <input type="password" name="mdp" placeholder="Mot de passe" required="required">
             <button class="button" type="submit">Je me connecte</button>
+            <div class="txtMdp" ><a href="motPasseOublie.php">Mot de passe oublié</a></div>
 
         </form>
     </div>

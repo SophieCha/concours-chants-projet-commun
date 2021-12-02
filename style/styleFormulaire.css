@@ -20,7 +20,9 @@ body {
   margin-left: 150px;
   width: 40%;
   color: black;
+  
 }
+
 .connexion {
   margin-right: 150px;
   width: 40%;
@@ -28,6 +30,7 @@ body {
 }
 input,
 button {
+  
   border: none;
   width: 49%;
   padding: 15px 10px;
@@ -48,4 +51,21 @@ button {
 
 .checkb {
   font-size: smaller;
+}
+.txtMdp {
+
+  margin-top: 15px;
+}
+.formulaireOublie {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 150px;
+  width: 40%;
+  color: black;
+}
+.classImput {
+  background: rgba(8, 8, 8, 0.425);
+  color: rgba(255, 248, 220, 0.788);
 }

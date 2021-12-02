@@ -27,6 +27,6 @@ if (isset($_SESSION['email']) ) {
         include './template/footer.php'; ?>
 
  
- 
+<script src="test.js"></script>
 </body>
 </html>

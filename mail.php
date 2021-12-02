@@ -1,4 +1,4 @@
-<?php// Le ou les destinataires
+<?php  // Le ou les destinataires
   $to  = "betaprefritte-2236@yopmail.com "; // notez la virgule pour ajouter un destinataire en plus
   
   
