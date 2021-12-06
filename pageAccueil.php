@@ -21,6 +21,13 @@ include './template/header.php';
     <img src="./media/concert1.jpg" alt="concert" class="bgAccueil"> 
 </div>
 
+<div class="presentationConcours">
+    <p >Concours de chants de la ville de Longuenesse <br>Venez nombreux!!!</p>
+</div>
+<div class="modalite">
+    
+</div>
+
 <a href="inscriptionConnexion.php"><input type="button" value=" Participation " class="btAccueil"></a>
 
 <?php
