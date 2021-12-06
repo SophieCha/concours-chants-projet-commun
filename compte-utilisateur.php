@@ -18,7 +18,8 @@ $nom = $result['nom'];
 $prenom = $result['prenom'];
 $dateNaissance = $result['dateNaissance'];
 $tel = $result['numTelephone'];
-
+$monID = $result['ID'];
+        
 
  
 
@@ -99,7 +100,14 @@ $tel = $result['numTelephone'];
 
             <div class="infoUser" id="transferFileDone">
              <form action="" method="POST" enctype="multipart/form-data">
-                <h4>Bande son uploadée!<h4>
+                <h4>Bande son uploadée:<h4>
+                    <figure>
+             
+                <audio controls src="uploads/<?php echo $nom.$monID.'.mp3';?>">
+                Your browser does not support the
+            <code>audio</code> element.
+        </audio>
+        </figure>
                
             </div>
 

@@ -33,22 +33,40 @@
   text-align: center;
 }
 
-table{
+table {
   border-collapse: collapse;
 }
 
-table td, table th {
+table td,
+table th {
   border: 1px solid #ddd;
   padding: 5px;
 }
 
-table tr:nth-child(even){background: #ebebeb;}
+table tr:nth-child(even) {
+  background: #ebebeb;
+}
 
-table tr:hover {background-color: #ddd;}
+table tr:hover {
+  background-color: #ddd;
+}
 
-table th{
+table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
   color: white;
+}
+
+#msgApi {
+  margin-top: 8px;
+  color: white;
+  font-weight: bold;
+}
+
+#notes {
+  background-color: silver;
+  border-radius: 5px;
+  padding: 5px;
+  border: solid 1px grey;
 }

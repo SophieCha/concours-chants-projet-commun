@@ -10,7 +10,7 @@
     <title>API</title>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="style/style.css">
-
+     
 </head>
 <body>
 
@@ -18,6 +18,7 @@
 
 <div class="one">
 <form id="myForm" method="post">
+  
   <b>Recherchez votre chanson:</b>
   <br>
   <br>
@@ -39,11 +40,12 @@
 </div>
 
 <div class="three">
-<p>Confirmez votre choix:</p>
+<p><b>Confirmez votre choix:</b></p>
 <form for="valider" method="post" action="songParticipant.php">
-<input type="text" name="musiqueFinale"readonly id="valider"></p>
+<input type="text" name="musiqueFinale"readonly id="valider" ></p>
 <input type="submit" value="Je valide." name="valider" ></form>
 <p id="test"></p>
+<?php echo "<p id='msgApi'>".$msgApi."</p>"; ?>
 </div>
 
 </div>
