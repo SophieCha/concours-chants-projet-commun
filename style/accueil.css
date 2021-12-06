@@ -31,12 +31,34 @@
   width: 50%;
   height: 100px;
   position: absolute;
-  top:40%;
-  left:50%;
+  top: 40%;
+  left: 50%;
   transform: translateX(-50%);
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
   padding-top: 25px;
   border-radius: 10px;
+}
+
+.modalite {
+  line-height: 25px;
+  margin-left: 10%;
+  padding: 40px;
+  text-align: justify;
+}
+
+.modalite h4 {
+  font-size: 25px;
+  text-align: center;
+  margin-left: 0px;
+  padding-bottom: 40px;
+}
+
+.modalite span {
+  background-color: rgb(58, 98, 107);
+  border-radius: 4px;
+  padding: 3px;
+  color: cornsilk;
+  box-shadow: 1px 1px 5px 5px rgba(173, 164, 128, 0.616);
 }
