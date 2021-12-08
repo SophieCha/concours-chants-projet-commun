@@ -20,3 +20,16 @@ function writeValid(x) {
 
   valider.value = cell1 + " - " + cell2;
 }
+
+function reset() {
+  var myID = $("#getID").val();
+  $.post(
+    "reset.php",
+    { myID: myID },
+
+    function (data) {
+      $("#texte").html(data);
+      // $("#myForm")[0].reset();
+    }
+  );
+}

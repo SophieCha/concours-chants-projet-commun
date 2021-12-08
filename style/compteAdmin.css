@@ -56,8 +56,11 @@ h2 {
   height: 40px;
   width: 35%;
   background: white;
-  border: 1px solid rgb(20, 20, 24);
+  border: 1px solid rgba(20, 20, 24, 0);
   border-radius: 10px;
   text-align: center;
-  
+}
+
+audio {
+  border-radius: 10px;
 }

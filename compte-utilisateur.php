@@ -90,25 +90,24 @@ $monID = $result['ID'];
         </div>
 
         
-          <h3>Transférez votre bande-son :</h3>
-             <div class="infoUser" id="transferFile">
-             <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <h3>Transférez votre bande-son :</h3>
+            <div class="infoUser" id="transferFile">
+                <form action="upload.php" method="POST" enctype="multipart/form-data">
                 <h4><label for="file">Insérer votre bande-son</label></h4>
                 <input type="file" name="file" id="file">
                 <button type="submit" name="submit">UPLOAD</button>
-            </form></div>
+                </form>
+            </div>
 
             <div class="infoUser" id="transferFileDone">
-             <form action="" method="POST" enctype="multipart/form-data">
+                <form action="" method="POST" enctype="multipart/form-data">
                 <h4>Bande son uploadée:<h4>
                     <figure>
-             
-                <audio controls src="uploads/<?php echo $nom.$monID.'.mp3';?>">
-                Your browser does not support the
-            <code>audio</code> element.
-        </audio>
-        </figure>
-               
+                        <audio controls src="uploads/<?php echo $nom.$monID.'.mp3';?>">
+                        Your browser does not support the element.
+                        </audio>
+                    </figure>
+                
             </div>
 
 

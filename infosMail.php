@@ -7,6 +7,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Recherche information user</title>
      <link rel="stylesheet" href="./style/compteAdmin.css">
+       <script src="http://code.jquery.com/jquery-latest.js"></script>
  </head>
  <body>
  
@@ -26,16 +27,44 @@ $infosMail = $requeteMail->fetch();
 ?>
 
 <div class="InfosMail">
-        <p>
-            <?php echo $infosMail['nom'];?> 
-            <?php echo $infosMail['prenom'];?> ,
-            <?php echo $infosMail['email'];?> ,
-            <?php echo $infosMail['dateNaissance'];?> ,
-            <?php echo $infosMail['numTelephone'];?>
-        </p>   
+        <table class="table table-hover">
+            <tr>
+         
+        <th>Prénom</th>    
+        <th>Nom</th>
+        
+      
+         <th>email</th>
+        <th>Téléphone</th>
+        <th>Id</th>
+        <th>Statut Mdp</th>
+        </tr>
+
+        <tr>
+             <td><?php echo $infosMail['prenom'];?> </td>
+            <td> <?php echo $infosMail['nom'];?> </td>
+           
+            <td><?php echo $infosMail['email'];?> </td>
+            <td><?php echo $infosMail['numTelephone'];?></td>
+            <td id="getId"><?php echo $infosMail['ID'];?></td>
+            <td><?php if($infoMail['statutMdp'] !== 0){
+                echo '<button id="getID" value="'.$infosMail['ID'].'" onclick="reset()">RESET</button>';
+                /*<form action="reset.php" method="post">
+                <input type="submit" name="btnReset"  value="X"/>
+                <input name="idSelect" type="hidden" value="'.$infosMail['ID'].'" ></form>';*/
+
+                //
+
+            }?>
+        </td>
+
+        </tr>
+        </table>
 </div>
+
 <?php
 include 'compte-administration.php';
 ?>
+ <script src="app.js"></script>
 </body>
 </html>

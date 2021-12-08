@@ -56,7 +56,9 @@ if(isset($_POST['submit'])) {
                 $requete = $connexion->prepare($envoi);
                 $requete->execute();
                 
-
+                $envoiNomFichier="UPDATE participant SET `nomFichier`='$fileNameNew' WHERE userID=$monID";
+                $requete2=$connexion->prepare($envoiNomFichier);
+                $requete2->execute();
                 
 
             }else{

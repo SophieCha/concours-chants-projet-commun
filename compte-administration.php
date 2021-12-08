@@ -34,10 +34,11 @@ if ($_SESSION['email']!= "admin@mail.com"){
 <h3>
     Recherche informations participants
 </h3>
+<p id="texte"></p>
 <div class="rechercheInfos">
 
         <form action="infosMail.php" method="post">
-            <input type="text" name="verifInfos" placeholder="Email du participant">
+            <input type="text" name="verifInfos" placeholder="Email du participant" required>
             <input type="submit" value="envoyer ">
             
         </form>
@@ -52,6 +53,12 @@ if ($_SESSION['email']!= "admin@mail.com"){
 <br>
 
 <?php
+/*------------------
+select a.nom,a.prenom,date,chanson from
+ user as a, participant as p 
+ where p.id = a.id; ->récupérer donnée qu'on veut
+-----------------------
+ inner join ->jointure*/
 
 $sql2 = $connexion->prepare("SELECT * FROM participant");
 $sql2->execute();
@@ -81,7 +88,12 @@ $key = $tablename[$j];
 
 
 if ($key !== 'validation') {
+    if($key === 'nomFichier' && $value[nomFichier] !== '0'){
+        echo '<td><audio controls src="uploads/'.$value[$key].'"></td>';
+
+    }else{
     echo '<td>'.$value[$key].'</td>';
+    }
 }
 elseif ($value[validation] === '0'){
     echo "<td><font color='red'>En attente.</font></td>";
@@ -113,6 +125,47 @@ echo '</table>';
 $good = $user->tablename['chanson']; 
 
 //echo $value[userID];
+?>
+
+<h3>Liste des utilisateurs:</h3>
+
+<?php 
+
+$sql = $connexion->prepare("SELECT * FROM users");
+$sql->execute();
+
+$users = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+echo '<table class="table table-hover"><tr>';
+foreach ($users as $value){
+$tablename =array_keys($value);
+}
+$i = 0;
+foreach ($tablename as $key)
+{
+$i++;
+echo "<th>$key</th>";
+}
+
+echo '</tr>';
+
+foreach ($users as $key => $value) {
+echo '<tr >';
+for ($j=0; $j < $i ; $j++) {
+$key = $tablename[$j];
+
+  echo '<td>'.$value[$key].'</td>';
+
+ 
+}
+ echo '</tr>';}
+
+echo '</table>';
+
+
+
+
+
 ?>
 </body>
 </html>
