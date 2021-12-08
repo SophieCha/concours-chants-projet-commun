@@ -48,17 +48,13 @@ $infosMail = $requeteMail->fetch();
             <td><?php echo $infosMail['numTelephone'];?></td>
             <td id="getId"><?php echo $infosMail['ID'];?></td>
             <td><?php
-            
-            if($infoMail['statutMdp']){
+           
+            if($infosMail['statutMdp']){
                 echo '<button id="getID" value="'.$infosMail['ID'].'" onclick="reset()">RESET</button>';
-                /*<form action="reset.php" method="post">
-                <input type="submit" name="btnReset"  value="X"/>
-                <input name="idSelect" type="hidden" value="'.$infosMail['ID'].'" ></form>';*/
-
-                //
+                
 
             }else{
-                echo 'no problem';
+                echo 'Rien à signaler';
             }?>
         </td>
 

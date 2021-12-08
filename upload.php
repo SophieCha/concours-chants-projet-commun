@@ -23,7 +23,7 @@ session_start();
 //lignes suivantes:script pour l'envoi du fichier.
 if(isset($_POST['submit'])) {
     $file = $_FILES['file'];
-    print_r($file);
+    //print_r($file);
     $fileName=$_FILES['file']['name'];
     $fileTmpName=$_FILES['file']['tmp_name'];
     $fileSize=$_FILES['file']['size'];
@@ -62,16 +62,16 @@ if(isset($_POST['submit'])) {
                 
 
             }else{
-                echo "Your file is too big!";
+                echo "Ton fichier est trop volumineux! (max 8M!) <a href='compte-utilisateur.php'>Essaie avec un fichier plus léger</a>";
             }
 
         }else{
-            echo "There was an error uploading your file!";
+            echo "Il y a eu une erreur au cours de l'envoi!<a href='compte-utilisateur.php'>Essaie avec un autre fichier</a>";
         }
 
         
     }else{
-        echo "You cannot upload files of this type!";
+                echo "Ce type de fichier n'est pas accepté!<a href='compte-utilisateur.php'>Fichiers authorisés: .mp3</a>";
     }
 }
  ?>

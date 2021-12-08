@@ -28,7 +28,7 @@ function generateRandomString($length = 5) {
 }
 
 $newMdp = generateRandomString();
-echo 'Voici le nouveau mot de passe: '.$newMdp;
+echo 'Voici le nouveau mot de passe 🤫: '.$newMdp;
 
 $newMdpHash = password_hash($newMdp, PASSWORD_DEFAULT);  
 

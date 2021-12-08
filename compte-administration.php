@@ -44,6 +44,8 @@ if ($_SESSION['email']!= "admin@mail.com"){
         </form>
 
 </div>
+<br>
+<br><br><br><br><br><br><br><br>
 
 <h3>Validation des chansons:
 </h3>
@@ -53,12 +55,7 @@ if ($_SESSION['email']!= "admin@mail.com"){
 <br>
 
 <?php
-/*------------------
-select a.nom,a.prenom,date,chanson from
- user as a, participant as p 
- where p.id = a.id; ->récupérer donnée qu'on veut
------------------------
- inner join ->jointure*/
+
 
 $sql2 = $connexion->prepare("SELECT * FROM participant");
 $sql2->execute();
@@ -147,9 +144,7 @@ $i++;
 if($key !== 'password'){
 echo "<th>$key</th>";
 }
-
 }
-
 echo '</tr>';
 
 foreach ($users as $key => $value) {
@@ -157,19 +152,19 @@ echo '<tr >';
 for ($j=0; $j < $i ; $j++) {
 $key = $tablename[$j];
 
-if ($value[statutMdp] === "1"){
-        echo '<td><font color="red">>⚠️ Demande Mdp !!! ⚠️</font></td>';
+if($value[$key] !== $value[password]){
 
-    }else{
-         if ($value[$key] !== $value['password']){
+    if ($key !== 'statutMdp'){
+     echo '<td>'.$value[$key].'</td>';}
+     elseif ($value[statutMdp] === "1"){
+        echo '<td><font color="red">⚠️ Demande Mdp !!! ⚠️</font></td>';
 
-   
-echo '<td>'.$value[$key].'</td>';
+    }elseif ($value[statutMdp] === "0"){
+        echo '<td>'.$value[$key].'</td>';}}
+         
 
-}else{
-        echo '<td></td>';
-    }
-}
+
+
    
  
 
