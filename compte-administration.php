@@ -144,7 +144,10 @@ $i = 0;
 foreach ($tablename as $key)
 {
 $i++;
+if($key !== 'password'){
 echo "<th>$key</th>";
+}
+
 }
 
 echo '</tr>';
@@ -154,7 +157,24 @@ echo '<tr >';
 for ($j=0; $j < $i ; $j++) {
 $key = $tablename[$j];
 
-  echo '<td>'.$value[$key].'</td>';
+if ($value[statutMdp] === "1"){
+        echo '<td><font color="red">>⚠️ Demande Mdp !!! ⚠️</font></td>';
+
+    }else{
+         if ($value[$key] !== $value['password']){
+
+   
+echo '<td>'.$value[$key].'</td>';
+
+}else{
+        echo '<td></td>';
+    }
+}
+   
+ 
+
+
+
 
  
 }

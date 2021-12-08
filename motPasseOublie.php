@@ -27,7 +27,7 @@ include './template/header.php';
 
         <h2>Mot de passe oublié</h2>
     
-        <form action="#" method="post" class="formulaire2">
+        <form for="email" action="demandeMdp.php" method="post" class="formulaire2">
             <input type="text" name="email" placeholder="E-mail" required pattern="^[A-Za-z . - _ 0-9]+@{1}[A-Za-z]+\.{1}[A-Za-z]{2,}$">
            
             <button class="button" type="submit">demande de mot de passe</button>

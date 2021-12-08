@@ -47,7 +47,9 @@ $infosMail = $requeteMail->fetch();
             <td><?php echo $infosMail['email'];?> </td>
             <td><?php echo $infosMail['numTelephone'];?></td>
             <td id="getId"><?php echo $infosMail['ID'];?></td>
-            <td><?php if($infoMail['statutMdp'] !== 0){
+            <td><?php
+            
+            if($infoMail['statutMdp']){
                 echo '<button id="getID" value="'.$infosMail['ID'].'" onclick="reset()">RESET</button>';
                 /*<form action="reset.php" method="post">
                 <input type="submit" name="btnReset"  value="X"/>
@@ -55,6 +57,8 @@ $infosMail = $requeteMail->fetch();
 
                 //
 
+            }else{
+                echo 'no problem';
             }?>
         </td>
 
