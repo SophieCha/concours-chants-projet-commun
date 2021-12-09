@@ -13,9 +13,8 @@
 
 #### Logs Admin (pour accéder à l'interface administrateur):
 
-mail: admin@mail.fr
-
-mdp: 123
+    -> mail: admin@mail.fr
+    -> mdp: 123
 
 ### Suivi/Lecture des fichiers:
 -pageAccueil.php (PARTICIPER -> s'inscrire.php)
