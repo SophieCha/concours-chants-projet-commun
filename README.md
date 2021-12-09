@@ -16,5 +16,6 @@ Autres fichiers:
 
 ## Logs Admin ->
 
-admin@mail.fr
-admin
+mail: admin@mail.fr
+
+mdp: 123
