@@ -1,9 +1,23 @@
 # concours-chants-projet-commun
 
-Projet commun: réalisation d'une interface permettant de s'inscrire à un concours de chants.
+## brief:
 
-Suivi des fichiers:
+    -> Projet commun, réalisation d'une interface permettant de s'inscrire à un concours de chants.
+    -> Fonctionnalités principales: -un compte utilisateur qui permet le choix de la chanson pour le concours.
+                                    -un espace administration pour valider les chansons des participants.
 
+### À faire une fois ce repo cloné pour le faire fonctionner:
+    -> créer une bdd concoursChant puis y importer le fichier concoursChant.sql.
+    ->Dans le fichier connexionBdd.php remplir les données  $servername = ''; $username = ''; $password = ''.
+    
+
+#### Logs Admin (pour accéder à l'interface administrateur):
+
+mail: admin@mail.fr
+
+mdp: 123
+
+### Suivi/Lecture des fichiers:
 -pageAccueil.php (PARTICIPER -> s'inscrire.php)
 
 -s'inscrire.php -> données réceptionnées par validInscription.php
@@ -13,8 +27,3 @@ SI ADMIN: redirection vers compte-administration.php
 Si USER: redirection vers compte-utilisateur.php
 Autres fichiers:
 -connexionBdd: à reprendre à chaque fois qu'une page a besoin de se connecter à la Bdd, à inclure en début de file: //<?php include './connexionBdd.php'; ?>
-
-## Logs Admin ->
-
-admin@mail.fr
-admin
